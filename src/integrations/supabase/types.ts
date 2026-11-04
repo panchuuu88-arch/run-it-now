@@ -14,7 +14,75 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          active: boolean
+          created_at: string
+          email: string
+          id: string
+          mobile: string
+          name: string
+        }
+        Insert: {
+          active?: boolean
+          created_at?: string
+          email?: string
+          id: string
+          mobile?: string
+          name?: string
+        }
+        Update: {
+          active?: boolean
+          created_at?: string
+          email?: string
+          id?: string
+          mobile?: string
+          name?: string
+        }
+        Relationships: []
+      }
+      shop_records: {
+        Row: {
+          deleted: boolean
+          entity: string
+          local_id: number
+          payload: Json
+          updated_at: string
+        }
+        Insert: {
+          deleted?: boolean
+          entity: string
+          local_id: number
+          payload?: Json
+          updated_at?: string
+        }
+        Update: {
+          deleted?: boolean
+          entity?: string
+          local_id?: number
+          payload?: Json
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          id: string
+          role: string
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: string
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
