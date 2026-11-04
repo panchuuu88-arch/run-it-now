@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+The G.K Mart app was imported from a code archive (local-first POS, Dexie + cloud sync).
+Its backend tables are `profiles`, `user_roles` and `shop_records` (created in
+drizzle/migrations/0000_create_profiles_roles_and_shop_records.sql); keep sync and staff
+logic aligned with that schema, and keep role checks in `user_roles`, never on profiles.
